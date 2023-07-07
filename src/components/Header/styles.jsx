@@ -83,8 +83,9 @@ export const NavModal = styled.div`
 
 export const ContainerClimate = styled.div`
   position: absolute;
-  left: 89%;
+  left: 88%;
   top: 2%;
+  
 `
 
 

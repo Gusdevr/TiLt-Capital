@@ -3,14 +3,15 @@ import { ContainerHeader, NavModal, ContainerClimate } from './styles'
 import { FaSearch, FaBell, FaQrcode, FaLanguage, FaMoon } from 'react-icons/fa'
 import WeatherComponent from "../Weather"
 import CapitalPng from "../../assets/img/capitallog.png"
-import CapitalWebPng from '../../assets/img/capitalweb.png'
 import { SearchInput } from './styles' 
+
 
 const Header = ({ darkMode, toggleDarkMode }) => {
   const [openModal, setOpenModal] = useState(false)
   const [modalContent, setModalContent] = useState(null)
   const [showSearchInput, setShowSearchInput] = useState(false)
   const [showIcon, setShowIcon] = useState(true)
+
 
   const inputRef = useRef(null)
 
@@ -49,10 +50,10 @@ const Header = ({ darkMode, toggleDarkMode }) => {
   }
 
   const menuItems = [
-    { id: 1, title: 'Compre Cripto', content: 'Bank Deposit' },
-    { id: 2, title: 'Mercados', content: 'Resumo do Mercado' },
-    { id: 3, title: 'Trade', content: 'Mercado de Cambio' },
-    { id: 4, title: 'Finanças', content: 'TiLt Card' },
+    { id: 1, title: 'Compre Cripto', content: 'Compre cripto de maneira fácil e rápida' },
+    { id: 2, title: 'Mercados', content: 'Sistema otimizado em tempo real de compra e venda' },
+    { id: 3, title: 'Trade', content: 'Mercado de Cambio com diversas formas de pagamentos' },
+    { id: 4, title: 'Finanças', content: 'Cartão TiLt Card exclusivo com menores taxas' },
     { id: 5, title: 'Institucional', content: 'Página Descritiva' },
   ]
 
