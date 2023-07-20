@@ -3,10 +3,9 @@ import styled from 'styled-components'
 export const ContainerHome = styled.div`
  background-color: ${({ darkMode }) => (darkMode ? '#000' : '#fff')};
   color: ${({ darkMode }) => (darkMode ? '#fff' : '#000')};
-  height: 200vh;
+  height: 410vh;
   width: 100vw;
-  
-  
+
   
 
 
@@ -246,6 +245,187 @@ export const SectionSec = styled.div`
    }
   }
 
+  
+
 
  
+`
+
+export const SectionThir = styled.div`
+  position: absolute;
+  top: 180%;
+  left: 21%;
+
+  .art-thir {
+    h1 {
+      font-size: 35px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      font-size: 26px;
+      margin-top: 40px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 50px;
+      margin-top: 20px;
+    }
+
+    img {
+      position: absolute;
+      left: 110%;
+      bottom: 20px;
+    }
+
+    button {
+    position: relative;
+    padding: 8px;
+    width: 160px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #235784;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    }
+  }
+`
+
+export const SectionFor = styled.div`
+position: absolute;
+top: 260%;
+left: 21%;
+
+h3{
+  margin-left: 75px;
+  margin-bottom: 12px;
+
+}
+
+span {
+  display: flex;
+  margin-left: 75px;
+}
+
+.safe {
+  position: relative;
+  top: 65px;
+}
+
+.eyes {
+  position: relative;
+  top: 70px;
+ 
+}
+
+.key {
+  position: relative;
+  top: 70px;
+ 
+}
+
+.secury-prot {
+  position: absolute;
+  bottom: -50px;
+  left: 92%;
+}
+
+  
+`
+
+export const SectionSprt = styled.div`
+position: absolute;
+top: 330%;
+left: 21%;
+
+h1 {
+  margin-bottom: 40px;
+}
+
+article {
+float: right;
+float: left;
+margin: 10px 15px;
+
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #235784;
+  
+ 
+}
+
+.sec-final {
+  
+  position: relative;
+  text-align: center;
+  top: 180px;
+  
+
+
+  button{
+
+    width: 160px;
+    height: 40px;
+    background-color: #235784;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    
+  }
+  
+
+}
+
+
+
+
+  
+`
+
+export const ContainerFooter = styled.footer`
+  
+  
+    position: absolute;
+    top: 395%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    left: 30.2%;
+    width: 50vw;
+    
+    h3 {
+      margin-bottom: 40px;
+    }
+
+    hr {
+     
+      margin-top: 30px;
+      margin-bottom: 40px;
+    }
+
+    .foot-icon {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      cursor: pointer;
+     
+    }
+    
+  
+  
 `
