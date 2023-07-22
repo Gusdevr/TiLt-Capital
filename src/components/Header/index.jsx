@@ -6,7 +6,7 @@ import CapitalPng from "../../assets/img/capitallog.png"
 import { SearchInput } from './styles' 
 
 
-const Header = ({ darkMode, toggleDarkMode }) => {
+const Header_Login = ({ darkMode, toggleDarkMode }) => {
   const [openModal, setOpenModal] = useState(false)
   const [modalContent, setModalContent] = useState(null)
   const [showSearchInput, setShowSearchInput] = useState(false)
@@ -119,4 +119,4 @@ const Header = ({ darkMode, toggleDarkMode }) => {
   );
 }
 
-export default Header
+export default Header_Login

@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./pages/Home"
-import Form from "./pages/Form"
+import Painel from "./pages/Painel"
 
 function Router() {
     return (
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<Home />} />
-                <Route path='/form' element={<Form />} />
+                <Route path='/painel' element={<Painel />} />
              
             </Routes>
         </BrowserRouter>

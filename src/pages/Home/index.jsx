@@ -3,6 +3,7 @@
 import React, { useState } from "react"
 import Header from "../../components/Header"
 
+
 import {
   ContainerHome,
   ContainerCriptoData,
@@ -11,7 +12,7 @@ import {
   SectionThir,
   SectionFor,
   SectionSprt,
-  ContainerFooter
+  ContainerFooter,
 } from "./styles"
 
 import CryptoData from "../../components/Criptocoin"
@@ -47,7 +48,18 @@ const Home = () => {
   return (
     <ContainerHome darkMode={darkMode}>
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+
+      <df-messenger
+  intent="WELCOME"
+  chat-title="Agente.TiLt"
+  agent-id="009807c7-f9d6-4104-83b6-99040cb2387b"
+  language-code="pt-br">
+    
+  </df-messenger>
+      
+      
       <SectionMain darkMode={darkMode}>
+
         <article className="art-main">
           <h1>
             A revolução das criptos
