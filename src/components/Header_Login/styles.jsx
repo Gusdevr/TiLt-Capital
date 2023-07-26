@@ -10,6 +10,7 @@ display: flex;
   align-items: center;
  
 
+
 .btn-log {
     position: absolute;
     background-color: #235784;
@@ -24,6 +25,58 @@ display: flex;
     top: 44px;
     color: #fff;
 }
+
+.dropdown-painel {
+    position: absolute;
+        top: 120px;
+        left: 300px;
+        width: 400px;
+        background-color: #fdfbfb;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        gap: 10px;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        list-style: none;
+        z-index: 3;
+         
+}
+
+.icon-drop {
+    position: absolute;
+    color: #fff;
+    right: 250px;
+  
+    
+}
+
+
+.dropdown-painel button {
+    width: 380px;
+        height: 60px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #fdfbfb;
+
+        :hover {
+            background-color: #235784;
+            color: #fff;
+        }
+}
+
+.menu-grid {
+    
+    :hover {
+            color: #235784;
+        }
+    }
+
+    .nav-login {
+        z-index: 3;
+    }
 
 
 
@@ -48,6 +101,9 @@ nav ul a {
         font-weight: 700;
         transition: 300ms;
     }
+
+
+
 
     .dropdown-menu {
         position: absolute;
@@ -74,19 +130,18 @@ nav ul a {
 
         :hover {
             background-color: #235784;
+            color: #fff;
         }
     }
 
-    .dropdown-menu li {
-      
-      
-    }
+   
+
 
 }
 
 .search-login {
   
-    margin-left: 100px;
+    margin-left: 210px;
 }
 
     
@@ -101,3 +156,4 @@ export const NavModal_Log = styled.div`
   cursor: pointer;
     
 `
+

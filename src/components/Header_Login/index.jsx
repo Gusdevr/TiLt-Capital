@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import { ContainerHeader_Log, NavModal_Log } from './styles';
+import React, { useState, useEffect, useRef } from "react"
+import { ContainerHeader_Log, NavModal_Log } from './styles'
 import { 
   FaSearch, 
   FaBell, 
@@ -8,54 +8,114 @@ import {
   FaMoon,
   FaUserCircle,
   FaChevronDown,
-  FaChevronUp
-} from 'react-icons/fa';
-import WeatherComponent from "../Weather";
-import CapitalPng from "../../assets/img/capitallog.png";
-import { SearchInput, ContainerClimate } from '../Header/styles'; 
-import { CgMenuGridR } from "react-icons/cg";
+  FaChevronUp,
+  FaWallet
+} from 'react-icons/fa'
+import WeatherComponent from "../Weather"
+import CapitalPng from "../../assets/img/capitallog.png"
+import { SearchInput, ContainerClimate } from '../Header/styles'
+import { CgMenuGridR } from "react-icons/cg"
+import { RiBankFill } from "react-icons/ri"
+import { HiRocketLaunch } from "react-icons/hi2"
 
 const Header_Login = ({ darkMode, toggleDarkMode }) => {
-  const [openModal, setOpenModal] = useState(false);
-  const [modalContent, setModalContent] = useState(null);
-  const [showSearchInput, setShowSearchInput] = useState(false);
-  const [showIcon, setShowIcon] = useState(true);
+  const [openModal, setOpenModal] = useState(false)
+  const [modalContent, setModalContent] = useState(null)
+  const [showSearchInput, setShowSearchInput] = useState(false)
+  const [showIcon, setShowIcon] = useState(true)
+  const [isAnyDropdownOpen, setIsAnyDropdownOpen] = useState(false)
+  const [isMenuGridROpen, setIsMenuGridROpen] = useState(false)
   const [dropdowns, setDropdowns] = useState([
-    { id: 1, label: "Compre Cripto", isOpen: false },
-    { id: 2, label: "Mercados", isOpen: false },
-    { id: 3, label: "Trade", isOpen: false },
-    { id: 4, label: "Earn", isOpen: false },
-    { id: 5, label: "Mais", isOpen: false },
-    { id: 6, label: "Carteira", isOpen: false },
-    { id: 7, label: "Ordens", isOpen: false },
+    {
+      id: 1,
+      title: "Compre Cripto",
+      label: "Compre Cripto",
+      isOpen: false,
+      buttons: [
+        { id: 11, title: "Depósito", action: () => {} },
+        { id: 12, title: "Cartão de Crédito", action: () => {} },
+        { id: 13, title: "Saldo", action: () => {} },
+      ],
+    },
+    {
+      id: 2,
+      title: "Mercados",
+      label: "Mercados",
+      isOpen: false,
+      buttons: [
+        { id: 21, title: "Resumo", action: () => {} },
+        { id: 22, title: "Trading", action: () => {} }
+      ],
+    },
+    {
+      id: 3,
+      title: "Trade",
+      label: "Trade",
+      isOpen: false,
+      buttons: [
+        { id: 31, title: "Spot", action: () => {} },
+        { id: 32, title: "Conversão", action: () => {} },
+        { id: 33, title: "Ordens", action: () => {} },
+      ],
+    },
+    {
+      id: 4,
+      title: "Earn",
+      label: "Earn",
+      isOpen: false,
+      buttons: [
+        { id: 41, title: "Mineração", action: () => {} },
+        { id: 42, title: "Staking", action: () => {} },
+        { id: 43, title: "Liquidez", action: () => {} },
+      ],
+    },
+    {
+      id: 5,
+      title: "Mais",
+      label: "Mais",
+      isOpen: false,
+      buttons: [
+        { id: 51, title: "Feed", action: () => {} },
+        { id: 52, title: "Blog", action: () => {} },
+        { id: 53, title: "NFT", action: () => {} },
+        { id: 53, title: "Institucional", action: () => {} }
+      ],
+    },
   ]);
 
-  const inputRef = useRef(null);
+  const inputRef = useRef(null)
 
   useEffect(() => {
     function handleClickOutside(event) {
       if (inputRef.current && !inputRef.current.contains(event.target)) {
-        setShowSearchInput(false);
-        setShowIcon(true);
+        setShowSearchInput(false)
+        setShowIcon(true)
+        setIsAnyDropdownOpen(false)
+        setIsMenuGridROpen(false)
+        closeAllDropdowns()
+      } else if (!event.target.classList.contains("dropdown-button")) {
+        setIsAnyDropdownOpen(false);
         closeAllDropdowns();
       }
     }
 
-    document.addEventListener('click', handleClickOutside, true);
+    document.addEventListener('click', handleClickOutside, true)
 
     return () => {
-      document.removeEventListener('click', handleClickOutside, true);
-    };
-  }, []);
+      document.removeEventListener('click', handleClickOutside, true)
+    }
+  }, [])
 
   const toggleSearchInput = () => {
-    setShowSearchInput(!showSearchInput);
-    setShowIcon(!showIcon);
-    closeAllDropdowns();
+    setShowSearchInput(!showSearchInput)
+    setShowIcon(!showIcon)
+    setIsAnyDropdownOpen(false)
+    setIsMenuGridROpen(false)
+    closeAllDropdowns()
   };
 
   const closeAllDropdowns = () => {
-    setDropdowns(dropdowns.map(dropdown => ({ ...dropdown, isOpen: false })));
+    setDropdowns(dropdowns.map(dropdown => ({ ...dropdown, isOpen: false })))
   };
 
   const toggleDropdown = (dropdownId) => {
@@ -64,25 +124,54 @@ const Header_Login = ({ darkMode, toggleDarkMode }) => {
         dropdown.id === dropdownId ? { ...dropdown, isOpen: !dropdown.isOpen } : dropdown
       )
     );
+    setIsAnyDropdownOpen(true)
+    setIsMenuGridROpen(false)
   };
+
+  const toggleMenuGridR = () => {
+    setIsMenuGridROpen(!isMenuGridROpen)
+    setIsAnyDropdownOpen(false)
+    closeAllDropdowns()
+   
+  };
+
+  
 
   return (
     <ContainerHeader_Log darkMode={darkMode}>
       <a href="/"><img width={'270px'} src={CapitalPng} /></a>
-      <CgMenuGridR size={'40px'} style={{marginBottom: '10px'}}/>
+
+    
+
+      
+      <CgMenuGridR className="menu-grid"
+        size={'40px'}
+        style={{ marginBottom: '10px', marginLeft: '18px', cursor: 'pointer' }}
+        onClick={toggleMenuGridR}
+      />
+      {isMenuGridROpen && (
+        <ul className="dropdown-painel">
+         <a href="#"><li><button> <RiBankFill size={'18px'} className="icon-drop"/>Exchange</button></li></a>
+         <a href="#"><li><button> <FaWallet size={'18px'} className="icon-drop"/>Carteira Defi</button></li></a>
+         <a href="#"><li><button> <HiRocketLaunch size={'18px'} className="icon-drop"/>Launchpad</button></li></a>
+        </ul>
+      )}
+    
 
       <nav className="nav-login">
         <ul>
           {dropdowns.map(dropdown => (
             <li key={dropdown.id}>
               <a href="#" onClick={() => toggleDropdown(dropdown.id)}>
-                {dropdown.label}
+                {dropdown.title}
                 {dropdown.isOpen ? <FaChevronUp /> : <FaChevronDown />}
                 {dropdown.isOpen && (
                   <ul className="dropdown-menu">
-                    <li><button onClick={() => {}}>Action 1</button></li>
-                    <li><button onClick={() => {}}>Action 2</button></li>
-                    <li><button onClick={() => {}}>Action 3</button></li>
+                    {dropdown.buttons.map((button) => (
+                      <li key={button.id}>
+                        <button onClick={button.action}>{button.title}</button>
+                      </li>
+                    ))}
                   </ul>
                 )}
               </a>
@@ -128,7 +217,11 @@ const Header_Login = ({ darkMode, toggleDarkMode }) => {
         </div>
       )}
     </ContainerHeader_Log>
-  );
+
+    
+  )
 }
 
-export default Header_Login;
+
+
+export default Header_Login

@@ -76,7 +76,7 @@ const Home = () => {
         <aside className="aside-post">
           <img width={"550px"} src={MainImagePng} />
           <div className="card">
-            <p className="animated-text">compre bitcoin</p>
+            <p className="animated-text">Compre Bitcoin</p>
           </div>
           <div className="card-two">
             <p className="animated-text-two">TiLt Card</p>
