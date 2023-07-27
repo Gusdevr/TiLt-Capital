@@ -47,15 +47,28 @@ export const FormComponent = styled.div`
     align-items: center;
     justify-content: center;
     margin: 10px 0px;
-    background-color: #d5d3d3;
-    color: black;
+    background-color: #235784;
+    color: #fff;
     font-size: 15px;
     font-weight: 500;
     border: none;
     cursor: pointer;
-
-  
+   
   }
+
+  .btn-google {
+    background-color: #d5d3d3dd;
+    color: black;
+    
+  }
+
+  .btn-apple {
+    background-color: #d5d3d3dd;
+    color: black;
+
+  }
+
+
 
   span {
     display: flex;

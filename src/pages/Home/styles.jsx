@@ -407,6 +407,8 @@ export const ContainerFooter = styled.footer`
     align-items: center;
     left: 30.2%;
     width: 50vw;
+    padding-bottom: 25px;
+    
     
     h3 {
       margin-bottom: 40px;

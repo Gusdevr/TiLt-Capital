@@ -12,6 +12,7 @@ export const GlobalStyles = createGlobalStyle`
 body {
     -webkit-font-smoothing: antialiased;
    width: 100vw;
+   overflow-x: hidden;
    
    
   
