@@ -72,7 +72,7 @@ const Painel = () => {
       <div className='container-search'>
       <h1>Explorar</h1>
      
-  <input type="text" class="input-field" placeholder="Moeda, Recursos" />
+  <input  type="text" class="input-field" placeholder="Moeda, Recursos"  />
   <span class="input-icon">&#128269;</span>
 
   </div>

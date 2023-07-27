@@ -66,7 +66,7 @@ const Home = () => {
             <br />
             começa aqui!
           </h1>
-          <button className="btn-sub">Cadastre com E-mail ou Celular</button>
+          <a href="/cadastro"><button className="btn-sub">Cadastre com E-mail ou Celular</button></a>
           <p>
             ou continue com <br />
             <button className="btn-goole">Google</button>

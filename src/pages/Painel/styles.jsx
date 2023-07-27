@@ -192,9 +192,11 @@ export const MenuSideRight = styled.aside`
   left: 82%;
   bottom: 65%;
 
+
   input {
     width: 300px;
     height: 35px;
+    padding: 5px;
   }
 
   h1 {

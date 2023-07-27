@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerHeader_Log = styled.div`
 
-display: flex;
+  display: flex;
   width: 100vw;
   height: 7rem;
   padding: 0.625rem;

@@ -78,7 +78,7 @@ const Header_Login = ({ darkMode, toggleDarkMode }) => {
             </div>
           )}
           {showIcon && (
-            <a href='#' className='login'>
+            <a href='/login' className='login'>
               <li>Entrar</li>
             </a>
           )}
@@ -92,7 +92,7 @@ const Header_Login = ({ darkMode, toggleDarkMode }) => {
           <FaMoon size={'20px'} onClick={toggleDarkMode} darkMode={darkMode} />
         </NavModal>
 
-        <button className='btn-nav'>Registrar</button>
+        <a href="/cadastro"><button className='btn-nav'>Registrar</button></a>
 
         <ContainerClimate>
           <WeatherComponent />
