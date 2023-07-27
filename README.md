@@ -22,6 +22,12 @@ O objetivo do projeto é o desenvolvimento de uma corretora de criptomoedas comp
 ![App Screenshot](https://i.imgur.com/rkll0tu.png)
 
 
+![App Screenshot](https://i.imgur.com/RHP3QCG.png)
+
+
+![App Screenshot](https://i.imgur.com/cEEKA39.png)
+
+
 
 
 
