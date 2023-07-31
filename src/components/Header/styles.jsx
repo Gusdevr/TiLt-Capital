@@ -24,6 +24,10 @@ export const ContainerHeader = styled.header`
     font-weight: 700;
     font-size: 1rem;
     color: ${({ darkMode }) => (darkMode ? '#fff' : '#090909')};
+
+    :hover {
+      color: #235784;
+    }
   }
 
   .login {
@@ -79,6 +83,7 @@ export const NavModal = styled.div`
   top: 50px;
   cursor: pointer;
   color: ${({ darkMode }) => (darkMode ? '#fff' : '#090909')};
+  
 `
 
 export const ContainerClimate = styled.div`

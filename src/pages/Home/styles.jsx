@@ -6,13 +6,30 @@ export const ContainerHome = styled.div`
   height: 410vh;
   width: 100vw;
 
+ 
+ @media (max-width: 1500px) {
+
+  aside img {
+   
+    
+    margin-left: 120px;
+
+   
+  }
+
+  df-messenger {
+    display: none;
+  }
+
+
+
+ }
   
-
-
 `
 
 export const SectionMain = styled.div`
- 
+
+
   
 
 .aside-post{
@@ -186,6 +203,10 @@ export const SectionMain = styled.div`
 
 export const ContainerCriptoData = styled.div`
 
+@media (max-width:1500px) {
+  margin-left: 80px;
+}
+
     
 `
 
@@ -201,6 +222,20 @@ export const SectionSec = styled.div`
   
 
   }
+
+  @media (max-width: 1500px) {
+
+    .banner-main{
+      margin-right: 300px;
+      width: 950px;
+     background-color: red;
+
+ 
+}
+
+
+
+}
 
   .art-sec {
    position: absolute;
@@ -247,7 +282,6 @@ export const SectionSec = styled.div`
 
   
 
-
  
 `
 
@@ -255,6 +289,16 @@ export const SectionThir = styled.div`
   position: absolute;
   top: 180%;
   left: 21%;
+
+  @media (max-width:1500px) {
+
+    article {
+      margin-left: 90px;
+    }
+    article h1 {
+      margin-top: 20px;
+    }
+  }
 
   .art-thir {
     h1 {
@@ -342,6 +386,30 @@ export const SectionSprt = styled.div`
 position: absolute;
 top: 330%;
 left: 21%;
+
+@media (max-width:1500px) {
+  
+  article {
+    
+    width: 300px;
+
+  }
+
+  .sec-final h1 {
+    position: absolute;
+    max-width: 400px;
+    margin-left: 300px;
+    top: 100px;
+  }
+
+  .sec-final button {
+    position: absolute;
+    top: 200px;
+    right: 400px;
+
+  }
+
+}
 
 h1 {
   margin-bottom: 40px;
@@ -431,6 +499,9 @@ export const ContainerFooter = styled.footer`
   
   
 `
+
+
+
 
 
 

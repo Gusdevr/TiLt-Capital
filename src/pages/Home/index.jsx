@@ -114,7 +114,7 @@ const Home = () => {
             <br />
             na TiLt de maneira fácil e rápida.
           </p>
-          <button>Abra sua conta</button>
+          <a href="/cadastro"><button>Abra sua conta</button></a>
         </article>
       </SectionSec>
 
@@ -144,7 +144,7 @@ const Home = () => {
             recorrentes para seus investimentos e descobre o que a TiLt lhe
             oferecer.
           </p>
-          <button>Comece Agora</button>
+          <a href="/cadastro"><button>Comece Agora</button></a>
           <img width={"330px"} height={"630px"} src={MainImageThirPng} />
         </article>
       </SectionThir>

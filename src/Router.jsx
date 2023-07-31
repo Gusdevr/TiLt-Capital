@@ -13,6 +13,7 @@ function Router() {
                 <Route path='/painel' element={<Painel />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/cadastro' element={<Register />} />
+              
             
 
              
